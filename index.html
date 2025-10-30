@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Shop</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Mini Boutique</h1>
+
+    <!-- Liste des produits -->
+
+    <div class="products">
+      <div class="product">
+        <h3>Shampoing</h3>
+        <p>Prix : <span data-price="8">8€</span></p>
+        <button class="add-btn" data-name="Shampoing" data-price="8">
+          Ajouter au panier
+        </button>
+      </div>
+
+      <div class="product">
+        <h3>Masque Capillaire</h3>
+        <p>Prix : <span data-price="12">12€</span></p>
+        <button class="add-btn" data-name="Masque Capillaire" data-price="12">
+          Ajouter au panier
+        </button>
+      </div>
+
+      <div class="product">
+        <h3>Huile Nourrissante</h3>
+        <p>Prix : <span data-price="15">15€</span></p>
+        <button class="add-btn" data-name="Huile Nourrissante" data-price="15">
+          Ajouter au panier
+        </button>
+      </div>
+    </div>
+
+    <hr />
+
+    <!-- Panier -->
+    <h2>🛒 Panier</h2>
+    <ul id="cart-list"></ul>
+
+    <p id="total">Total : 0€</p>
+
+    <script src="script.js"></script>
+  </body>
+</html>
