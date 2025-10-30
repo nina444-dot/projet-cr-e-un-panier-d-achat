@@ -1,29 +1,41 @@
-// On récupère tous les boutons "Ajouter"
+// boutons ajouter
 const boutonsAjouter = document.querySelectorAll(".add-btn");
-
-// On récupère la liste du panier et le total
 const listePanier = document.getElementById("cart-list");
 const totalTexte = document.getElementById("total");
-
-// Variable pour garder le total
 let total = 0;
 
-// Pour chaque bouton "Ajouter"
-boutonsAjouter.forEach(function (bouton) {
-  bouton.addEventListener("click", function () {
-    // On récupère le nom et le prix du produit
+boutonsAjouter.forEach((bouton) => {
+  bouton.addEventListener("click", () => {
     const nomProduit = bouton.dataset.name;
     const prixProduit = Number(bouton.dataset.price);
 
-    // On crée un nouvel élément <li> pour afficher dans le panier
-    const nouvelElement = document.createElement("li");
-    nouvelElement.textContent = nomProduit + " - " + prixProduit + "€";
+    // carte pareil que à gauche
+    const article = document.createElement("div");
+    article.className = "product in-panier";
 
-    // On ajoute cet élément à la liste du panier
-    listePanier.appendChild(nouvelElement);
+    const titre = document.createElement("h3");
+    titre.textContent = nomProduit;
 
-    // On met à jour le total
-    total = total + prixProduit;
+    const prix = document.createElement("p");
+    prix.textContent = "Prix : " + prixProduit + "€";
+
+    const btn = document.createElement("button");
+    btn.textContent = "Retirer";
+    btn.className = "remove-btn";
+
+    btn.addEventListener("click", () => {
+      article.remove();
+      total -= prixProduit;
+      totalTexte.textContent = "Total : " + total + "€";
+    });
+
+    article.appendChild(titre);
+    article.appendChild(prix);
+    article.appendChild(btn);
+
+    listePanier.appendChild(article);
+
+    total += prixProduit;
     totalTexte.textContent = "Total : " + total + "€";
   });
 });
