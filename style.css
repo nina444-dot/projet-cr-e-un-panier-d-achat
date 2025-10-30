@@ -1,0 +1,33 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: row;
+  background-color: #e7b6b6;
+}
+h1 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.product {
+  background: rgb(174, 148, 148);
+  padding: 15px;
+  border-radius: 8px;
+  width: 200px;
+}
+.add-btn {
+  background-color: #ff7c95;
+
+  padding: 10px;
+  width: 100%;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 14px;
+}
