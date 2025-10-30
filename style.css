@@ -10,6 +10,8 @@ body {
 /* Titre centré */
 h1 {
   text-align: center;
+  border-width: 5px;
+  border-style: double;
   margin-bottom: 30px;
   width: 100%;
   font-size: 28px;
@@ -22,7 +24,6 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: self-start;
-  gap: 60px;
   width: 100%;
 }
 
@@ -32,6 +33,8 @@ h1 {
   flex-direction: column;
   gap: 25px;
   align-items: center;
+  border-width: 5px;
+  border-style: double;
 }
 
 /* Carte produit */
@@ -61,7 +64,9 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 260px;
+  width: 270px;
+  border-width: 5px;
+  border-style: double;
 }
 
 /* Titre Panier */
